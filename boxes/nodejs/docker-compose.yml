@@ -8,5 +8,7 @@ services:
     build: .
     entrypoint: ".picobox/start"
     hostname: picobox
+    ports:
+    - 80:3333
     volumes:
     - ".:/~:cached"
