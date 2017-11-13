@@ -5,6 +5,8 @@ elasticsearch:
     - db-data:/var/lib/elasticsearch/data
   ports:
     - '9200:9200'
+  environment:
+    xpack.security.enabled: 'false'
 
 # create links to these services
 links:
