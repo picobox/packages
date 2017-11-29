@@ -57,12 +57,14 @@ picobox_rake ()   { cmd=(dev rake $@) ; picobox_proxy ${cmd[@]} ; }
 picobox_bundle () { cmd=(dev bundle $@) ; picobox_proxy ${cmd[@]} ; }
 picobox_irb()     { cmd=(dev irb $@) ; picobox_proxy ${cmd[@]} ; }
 picobox_ruby()    { cmd=(dev ruby $@) ; picobox_proxy ${cmd[@]} ; }
+picobox_rackup()  { cmd=(dev rackup $@) ; picobox_proxy ${cmd[@]} ; }
 
 alias gem=picobox_gem
 alias rake=picobox_rake
 alias bundle=picobox_bundle
 alias irb=picobox_irb
 alias ruby=picobox_ruby
+alias rackup=picobox_rackup
 
 
 ###
