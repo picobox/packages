@@ -1,5 +1,5 @@
 chromedriver:
-  image: robcherry/docker-chromedriver:latest
+  image: picobox/docker-chromedriver:latest
   ports:
     - '4444'
   cap_add:
