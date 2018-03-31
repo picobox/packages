@@ -77,8 +77,8 @@ picobox_sidekiq () { cmd=(dev bundle exec sidekiq $@) ; picobox_proxy ${cmd[@]} 
 picobox_guard ()   { cmd=(test bundle exec guard $@) ; picobox_proxy ${cmd[@]} ; }
 picobox_rspec ()   { cmd=(test bundle exec rspec $@) ; picobox_proxy ${cmd[@]} ; }
 
-picobox_webpack ()           { cmd=(webpack bin/webpack $@) ; picobox_proxy ${cmd[@]} ; }
-picobox_webpack_dev_server() { cmd=(webpack bin/webpack-dev-server $@) ; picobox_proxy ${cmd[@]} ; }
+picobox_webpack ()           { cmd=(dev bin/webpack $@) ; picobox_proxy ${cmd[@]} ; }
+picobox_webpack_dev_server() { cmd=(dev bin/webpack-dev-server $@) ; picobox_proxy ${cmd[@]} ; }
 
 
 alias rails=picobox_rails
