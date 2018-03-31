@@ -73,21 +73,21 @@ alias rackup=picobox_rackup
 picobox_rails ()   { cmd=(dev bundle exec rails $@) ; picobox_proxy ${cmd[@]} ; }
 picobox_spring ()  { cmd=(dev bundle exec spring $@) ; picobox_proxy ${cmd[@]} ; }
 picobox_yarn ()    { cmd=(dev bundle exec yarn $@) ; picobox_proxy ${cmd[@]} ; }
-picobox_webpack () { cmd=(dev bundle exec webpack $@) ; picobox_proxy ${cmd[@]} ; }
+picobox_sidekiq () { cmd=(dev bundle exec sidekiq $@) ; picobox_proxy ${cmd[@]} ; }
 picobox_guard ()   { cmd=(test bundle exec guard $@) ; picobox_proxy ${cmd[@]} ; }
 picobox_rspec ()   { cmd=(test bundle exec rspec $@) ; picobox_proxy ${cmd[@]} ; }
 
-picobox_webpack_dev_server() { cmd=(webpack bundle exec webpack-dev-server $@) ; picobox_proxy ${cmd[@]} ; }
-picobox_webpack_watcher ()   { cmd=(webpack bundle exec webpack-watcher $@) ; picobox_proxy ${cmd[@]} ; }
+picobox_webpack ()           { cmd=(webpack bin/webpack $@) ; picobox_proxy ${cmd[@]} ; }
+picobox_webpack_dev_server() { cmd=(webpack bin/webpack-dev-server $@) ; picobox_proxy ${cmd[@]} ; }
 
 
 alias rails=picobox_rails
 alias rspec=picobox_rspec
 alias spring=picobox_spring
 alias yarn=picobox_yarn
+alias sidekiq=picobox_sidekiq
 alias webpack=picobox_webpack
 alias webpack-dev-server=picobox_webpack_dev_server
-alias webpack-watcher=picobox_webpack_watcher
 alias guard=picobox_guard
 
 ##

@@ -40,7 +40,7 @@ services:
       RAILS_ENV: development
     hostname: picobox
     ports:
-    - 8080:8080
+    - 3035:3035
   bundle:
     image: busybox
     volumes:
