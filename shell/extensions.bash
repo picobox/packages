@@ -18,7 +18,7 @@ project_root() {
 }
 
 can_execute () {
-  if [ -e "$(project_root)/project.ini" ]; then
+  if [ -e "$(project_root)/project.ini" ] && [ "$PB_PROXY" != "false" ]; then
     true
   else
     false
