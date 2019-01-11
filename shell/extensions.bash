@@ -146,3 +146,10 @@ picobox_node()   { cmd=(dev node $@) ; picobox_proxy ${cmd[@]} ; }
 alias npm=picobox_npm
 alias nodejs=picobox_nodejs
 alias node=picobox_node
+
+
+##
+## backstop proxies
+##
+
+alias backstop='docker run --rm -v $(pwd):/src backstopjs/backstopjs "$@"'
